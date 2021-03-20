@@ -51,11 +51,11 @@ pip install torch-geometric
 ```
 ### Running main model to classify brain networks:
 ```bash
-python main.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
+python main.py --dataroot ${YOUR_PROCCESSED_DATA_DIR} --dataset {abide | hcp}
 ```
 Note: additional command line parameters can be specified to set hyperparameter values
 
 ### Performing Hyperparameter Optimization:
 ```bash
-python optimize.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
+python optimize.py --dataroot ${YOUR_PROCCESSED_DATA_DIR} --dataset{abide | hcp}
 ```
