@@ -25,3 +25,13 @@ E: Everyone
 |Report:Evaluation  | D             |
 | Report:Discussion | D             |
 
+
+Files: 
+
+AbideData.py : Abide Data
+
+main.py : Normalizing/Training Data for ABIDE data
+
+optimize.py : Normalizing/Training Data/Optuna Study for ABIDE data
+
+process_data.py : Used for preprocessing the ABIDE data. 
