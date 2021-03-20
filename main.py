@@ -60,7 +60,7 @@ writer = SummaryWriter(os.path.join('./log/fold{}_consis{}'.format(opt.fold,opt.
 
 ############# Define Dataloader -- need costumize#####################
 if opt.dataset == 'hcp':
-    # TODO: Load HCP Data
+    dataset = BiopointDataset(opt.dataroot, 'HCP')
     indim = 268
     nclass = 7
 else:
