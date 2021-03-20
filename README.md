@@ -57,5 +57,5 @@ Note: additional command line parameters can be specified to set hyperparameter 
 
 ### Performing Hyperparameter Optimization:
 ```bash
-python optimze.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
+python optimize.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
 ```
