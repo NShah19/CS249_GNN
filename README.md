@@ -1,4 +1,4 @@
-# CS249_GNN
+# GNN for Brain Network Analysis
 
 This is the submission folder for Team 8
 
@@ -11,27 +11,51 @@ C: Nima Zaghari
 D: Daisy Zheng
 E: Everyone
 
-| Task              | People        |
-| -------------     | ------------- |
-| Slides            | E             |
-| HPC data          | B             |      
-| ABIDE data        | D             |
-|Report:Abstract    | A,C           |
-| Report:Intro      | A             |
-| Report:Problem    | B             |
-|Report:Related Work| A,B,C         |
-| Report:Method     | B             |
-| Report:Exp. Design| C,D           |
-|Report:Evaluation  | D             |
-| Report:Discussion | D             |
+| Task                   | People        |
+| -------------          | ------------- |
+| Slides                 | E             |
+| HPC data processing    | B             |      
+| ABIDE data processing  | D             |
+| Optuna Framework       | A             |
+| Optuna Visualization   | D             |
+| Report: Abstract       | A, C          |
+| Report: Intro          | A             |
+| Report: Problem        | B             |
+| Report: Related Work   | A, B, C       |
+| Report: Methods        | B             |
+| Report: Exp. Design    | A, C, D       |
+| Report: Evaluation     | D             |
+| Report: Discussion     | D             |
 
 
 Files: 
 
-AbideData.py : Abide Data
+main.py : runs brain network classification model
 
-main.py : Normalizing/Training Data for ABIDE data
+optimize.py : runs optuna study for hyperparameter optimization
 
-optimize.py : Normalizing/Training Data/Optuna Study for ABIDE data
+AbideData.py : Abide Dataset class
 
-process_data.py : Used for preprocessing the ABIDE data. 
+process_data.py : used for preprocessing the ABIDE data 
+
+## Setup:
+The following requirements must be installed before running the model:
+```bash
+pip install -r requirements.txt
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio===0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-geometric
+```
+## Running main model to classify brain networks:
+```bash
+python main.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
+```
+Note: additional command line parameters can be specified to set hyperparameter values
+
+## Performing Hyperparameter Optimization:
+```bash
+python optimze.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
+```
