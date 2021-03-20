@@ -28,7 +28,7 @@ E: Everyone
 | Report: Discussion     | D             |
 
 
-Files: 
+### Files: 
 
 main.py : runs brain network classification model
 
@@ -38,7 +38,7 @@ AbideData.py : Abide Dataset class
 
 process_data.py : used for preprocessing the ABIDE data 
 
-## Setup:
+### Setup:
 The following requirements must be installed before running the model:
 ```bash
 pip install -r requirements.txt
@@ -49,13 +49,13 @@ pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111
 pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
 pip install torch-geometric
 ```
-## Running main model to classify brain networks:
+### Running main model to classify brain networks:
 ```bash
 python main.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
 ```
 Note: additional command line parameters can be specified to set hyperparameter values
 
-## Performing Hyperparameter Optimization:
+### Performing Hyperparameter Optimization:
 ```bash
 python optimze.py --dataroot ${YOUR_PROCCESSED_DATA_DIR}
 ```
